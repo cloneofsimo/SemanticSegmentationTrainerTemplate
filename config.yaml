@@ -1,0 +1,26 @@
+
+train:
+  optim: "adam"
+  batch_size: 16
+  betas: [0.5, 0.9]
+  weight_decay: 0.000001
+  lr: 0.00005
+
+  epochs: 4
+  version: 0
+  gpus: [0]
+  num_workers: 4
+
+  log_dir: "logs"
+  checkpoint_dir: "checkpoints"
+  save_top_k: 1
+  check_val_freq: 1
+
+  fast_dev_run: False
+
+data:
+  img_folder: "/PNGImages/*"
+  mask_folder: "/PedMasks/*"
+  root : "./PennFudanPed"
+pre_idx: 1
+recommender_option : 0
